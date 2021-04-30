@@ -1,0 +1,13 @@
+Reading TIF files and grayscaling
+
+% Write a MATLAB script that clears the current workspace, reads 
+% the image “BLUE.tif” into the current workspace, and displays 
+% the image as a grayscale.
+
+clc; //clears workspace
+
+A = imread('BLUE.tif') ;    % assigns image to variable A
+
+image(A, 'CDatamapping', 'scaled') ;  % adjusts colormapping to scaled
+colorbar ;                 % adds color bar
+colormap gray ;            % adjusts colormapping to grayscale

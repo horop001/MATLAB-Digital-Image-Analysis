@@ -1,0 +1,27 @@
+Reading & Adjutsing multiple TIF files
+
+% Write a MATLAB script that reads in BLUE, GREEN, and RED
+% and assigns them into different variables in the workspace. 
+% Adjust each channel individually to brighten the image and 
+% display them as separate grayscale images in separate figure windows. 
+
+clc  ;    % clears workspace
+
+A = imread('GREEN.tif') ;
+B = imread('BLUE.tif') ; 
+C = imread('RED.tif') ;       % we've assigned each image to a variable
+
+figure, image(A, 'CDatamapping', 'scaled' ) ;
+colorbar ;           % adds color bar
+colormap gray ;      % adjust colormapping to grayscale
+
+figure, image(B, 'CDatamapping', 'scaled' ) ;
+colorbar ;           % adds color bar
+colormap gray ;      % adjust colormapping to grayscale
+
+figure, image(C, 'CDatamapping', 'scaled' ) ;  
+colorbar ;           % adds color bar
+colormap gray ;      % adjust colormapping to grayscale
+
+
+% we've displayed each adjusted image in separate figure windows
